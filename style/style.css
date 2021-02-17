@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  margin-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(2, 42, 48, 0.801);
+  height: 100%;
+  width: 20%;
+  animation: move_eye 4s ease-in  infinite reverse both running;
+}
+
+@-webkit-keyframes move_eye {
+  0% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.1)), color-stop(50%, rgba(0, 0, 0, 0.9)), color-stop(75%, rgba(0, 0, 0, 0.9)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 75%);
+  }
+  25% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.1)), color-stop(50%, rgba(0, 0, 0, 0.9)), color-stop(75%, rgba(0, 0, 0, 0.9)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 75%);
+  }
+  50% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.1)), color-stop(75%, rgba(0, 0, 0, 0.9)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 75%);
+  }
+  50% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.1)), color-stop(75%, rgba(0, 0, 0, 0.9)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 75%);
+  }
+  100% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.9)), color-stop(75%, rgba(0, 0, 0, 0.1)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.1) 75%);
+  }
+}
+
+@keyframes move_eye {
+  0% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.1)), color-stop(50%, rgba(0, 0, 0, 0.9)), color-stop(75%, rgba(0, 0, 0, 0.9)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 75%);
+  }
+  25% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.1)), color-stop(50%, rgba(0, 0, 0, 0.9)), color-stop(75%, rgba(0, 0, 0, 0.9)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 75%);
+  }
+  50% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.1)), color-stop(75%, rgba(0, 0, 0, 0.9)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 75%);
+  }
+  50% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.1)), color-stop(75%, rgba(0, 0, 0, 0.9)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 75%);
+  }
+  100% {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.9)), color-stop(75%, rgba(0, 0, 0, 0.1)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.1) 75%);
+  }
+}
+
+body .pac {
+  height: 60px;
+  width: 60px;
+  margin-top: 200px;
+  -webkit-animation-name: stretch;
+          animation-name: stretch;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+body .pac .eye {
+  position: absolute;
+  top: 250px;
+  left: 170px;
+  background: #eee;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+@-webkit-keyframes stretch {
+  0% {
+    width: 240px;
+    height: 240px;
+    background-color: #f5f506;
+    border-radius: 50%;
+  }
+  40% {
+    width: 240px;
+    height: 240px;
+    background-color: #f5f506;
+    border-radius: 50%;
+  }
+  50% {
+    width: 200px;
+    height: 200px;
+    border-top: 120px solid #f5f506;
+    border-left: 120px solid #f5f506;
+    border-bottom: 120px solid #f5f506;
+    border-right: 120px solid transparent;
+    border-radius: 50%;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    border-top: 120px solid #f5f506;
+    border-left: 120px solid #f5f506;
+    border-bottom: 120px solid #f5f506;
+    border-right: 120px solid transparent;
+    border-radius: 50%;
+  }
+}
+
+@keyframes stretch {
+  0% {
+    width: 240px;
+    height: 240px;
+    background-color: #f5f506;
+    border-radius: 50%;
+  }
+  40% {
+    width: 240px;
+    height: 240px;
+    background-color: #f5f506;
+    border-radius: 50%;
+  }
+  50% {
+    width: 200px;
+    height: 200px;
+    border-top: 120px solid #f5f506;
+    border-left: 120px solid #f5f506;
+    border-bottom: 120px solid #f5f506;
+    border-right: 120px solid transparent;
+    border-radius: 50%;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    border-top: 120px solid #f5f506;
+    border-left: 120px solid #f5f506;
+    border-bottom: 120px solid #f5f506;
+    border-right: 120px solid transparent;
+    border-radius: 50%;
+  }
+}
+
+body .eat {
+  margin-top: 300px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: relative;
+  animation: myfirst 3s ease-in  infinite reverse both running;
+}
+
+@-webkit-keyframes myfirst {
+  100% {
+    left: 1400px;
+  }
+  0% {
+    left: -60px;
+  }
+}
+
+@keyframes myfirst {
+  100% {
+    left: 1400px;
+  }
+  0% {
+    left: -60px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

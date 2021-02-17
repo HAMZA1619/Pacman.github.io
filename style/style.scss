@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@mixin pacman {
+    width: 200px;
+    height: 200px;
+    border-top: 120px solid rgb(245, 245, 6);
+    border-left: 120px solid rgb(245, 245, 6);
+    border-bottom: 120px solid rgb(245, 245, 6);
+    border-right: 120px solid transparent;
+     border-radius: 50%;
+}
+body{
+    width: 90%;
+   margin-left: 50px;
+    display: flex;
+    background-color: rgba(2, 42, 48, 0.801);
+    height: 100%;
+    width: 20%;
+    animation: move_eye 4s ease-in  infinite reverse both running;
+          @keyframes move_eye { 0% {background-image: linear-gradient(to right,
+            rgba(0, 0, 0, .1) 25%,
+            rgba(0, 0, 0, .9) 50% ,
+            rgba(0, 0, 0, .9) 75%); }
+            25% {background-image: linear-gradient(to right,
+                rgba(0, 0, 0, .1) 25%,
+                rgba(0, 0, 0, .9) 50%,
+                rgba(0, 0, 0, .9) 75%); }
+            50%{
+                background-image: linear-gradient(to right,
+                rgba(0, 0, 0, .9) 25%,
+                rgba(0, 0, 0, .1) 50%,
+                rgba(0, 0, 0, .9) 75%);
+            }
+            50%{
+                background-image: linear-gradient(to right,
+                rgba(0, 0, 0, .9) 25%,
+                rgba(0, 0, 0, .1) 50%,
+                rgba(0, 0, 0, .9) 75%);
+            }
+             100% {background-image: linear-gradient(to right,
+                rgba(0, 0, 0, .9) 25%,
+                rgba(0, 0, 0, .9) 50%,
+                rgba(0, 0, 0, .1) 75%);}  }
+    .pac{
+                height: 60px;
+                width: 60px;
+                margin-top: 200px ;
+                animation-name: stretch;
+                animation-duration: 3s; 
+                animation-iteration-count:infinite;
+                .eye {
+                   position: absolute;
+                   top: 250px;
+                   left: 170px;
+                    background: #eee;
+                    border-radius: 100%;
+                    width: 20px;
+                    height: 20px;
+                    box-sizing: content-box;
+                  }
+        
+              @keyframes stretch {
+                0% {
+                   
+       width: 240px;
+        height: 240px;
+        background-color: rgb(245, 245, 6);
+        border-radius: 50%;
+                }
+                40%{
+                    width: 240px;
+                    height: 240px;
+                    background-color: rgb(245, 245, 6);
+                    border-radius: 50%;  
+                }
+                50%{ @include pacman();
+                }
+                
+                100% {
+                    @include pacman();
+           
+                }
+              }
+        }
+        .eat{
+
+margin-top: 300px ;
+border-radius: 50%;
+  width: 20px;
+  height:20px;
+  background-color: red;
+  position: relative;
+  animation: myfirst 3s ease-in  infinite reverse both running;
+}
+
+@keyframes myfirst {
+ 
+  100%  { left:1400px; }
+  0% {left:-60px; }
+}
+}           
+       
+          
+          
+        
+    
